@@ -60,7 +60,6 @@ US19	- As a user, I want the system to extract and auto-fill data from scanned v
 ## IST 303 Team Project — Part A Deliverables
 
 ### Team
-### Team
 - **Md Shah Alam (He/Him)** — @techshah786
 - **Sameer Alghamdi** — @sameer-alghamdi
 - **Cesar Barrera** — @Czar-phd
