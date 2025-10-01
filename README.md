@@ -60,13 +60,12 @@ US19	- As a user, I want the system to extract and auto-fill data from scanned v
 ## IST 303 Team Project — Part A Deliverables
 
 ### Team
-- Cesar Barrera (@cbarrera)  <!-- adjust handle if needed -->
-- Sameer Alghamdi (@sameer-alghamdi)
-- Tech Shah (@techshah786)
-- sjrim12 (@sjrim12)
-- Czar-phd (@Czar-phd)
-- Oucheoma (@Oucheoma)
-- techshah787 (@techshah787)
+### Team
+- **Md Shah Alam (He/Him)** — @techshah786
+- **Sameer Alghamdi** — @sameer-alghamdi
+- **Cesar Barrera** — @Czar-phd
+- **Ucheoma Okoma** — @Oucheoma
+- **Shawn Rim** — @sjrim12
 
 **Team meeting(s):**
 - 2025-09-15 — attendees: CB, SA, TS, SJ, CZ, UO, TS7 — chose concept, drafted stories.
