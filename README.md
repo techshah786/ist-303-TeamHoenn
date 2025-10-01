@@ -54,3 +54,48 @@ US17	- As a user, I want to input income, expense, savings, debt, and investment
 US18	- As a user, I want to scan physical vouchers or receipts using my camera, so I can enter transactions faster.	- 8 days	Medium
 US19	- As a user, I want the system to extract and auto-fill data from scanned vouchers (e.g., amount, date, category), so I save time.	- 10 days	: High
 
+
+---
+
+## IST 303 Team Project — Part A Deliverables
+
+### Team
+- **Md Shah Alam (He/Him)** — @techshah786
+- **Sameer Alghamdi** — @sameer-alghamdi
+- **Cesar Barrera** — @Czar-phd
+- **Ucheoma Okoma** — @Oucheoma
+- **Shawn Rim** — @sjrim12
+
+**Team meeting(s):**
+- 2025-09-15 — attendees: CB, SA, TS, SJ, CZ, UO, TS7 — chose concept, drafted stories.
+- 2025-09-22 — reviewed scope for Milestone 1.0; assigned research tasks.
+
+### Tech Stack
+Python 3 + Flask, Jinja2 templates, SQLite (dev), PyTest.
+
+### Stakeholders (with rationale)
+- End Users — primary value and usability.
+- Product Owner (Instructor/Client) — prioritization and acceptance.
+- Developers (Team) — implementation and code quality.
+- UI/UX (Team hat) — accessibility & ease of use.
+- QA/Test (Team hat) — verifies functionality and prevents regressions.
+- Security/Compliance (Team hat) — safe handling of PII, auth, secrets.
+- Support (Team hat) — issues and feedback post-release.
+
+### Initial User Stories (hours + acceptance criteria)
+| ID | User Story | Est (hrs) | Priority | Acceptance Criteria |
+|---|---|---:|:--:|---|
+| US01 | As a user, I can create an account and log in/out securely. | 10 | High | Register/login happy path; hashed passwords; invalid creds rejected. |
+| US02 | As a user, I can add/edit/delete income & expense transactions. | 14 | High | CRUD works; validation; list updates. |
+| US03 | As a user, I can categorize transactions (manual). | 8 | High | Category dropdown; filter by category. |
+| US04 | As a user, I can set a monthly budget per category. | 10 | High | Create/update budget; invalid values blocked. |
+| US05 | As a user, I can see a dashboard with totals & simple charts. | 12 | High | MTD totals, by-category chart; loads locally <2s. |
+| US06 | As a user, I can export data to CSV. | 6 | Medium | CSV with headers; at least one test validates structure. |
+| US07 | As a user, I can upload a receipt and link it to a transaction. | 12 | Medium | File types/size constrained; path stored; retrievable. |
+| US08 | As a user, I receive a monthly summary (dev: console/file). | 10 | Low | Summary includes totals and top categories. |
+
+**Deferred from 1.0 (keeps scope realistic):** ML auto-categorization, AI advice, bank API linking, native mobile/biometrics.
+
+### Assumptions & NFRs
+Minimal PII; secrets in `.env`; no `venv` or secrets in Git; keyboard-accessible forms; Chrome/Edge/Firefox current.
+
