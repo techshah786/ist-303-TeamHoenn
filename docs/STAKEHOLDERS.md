@@ -1,6 +1,6 @@
-# Stakeholders (from team document)
+# Stakeholders
 
-- **Product Owner (Business Representative)** — represents the business needs, defines features, sets priorities  
+- **Product Owner (Business Representative)** — represents business needs, defines features, sets priorities  
 - **Project Manager (Project Oversight)** — delivery, scope, budget, resources  
 - **Development Team (Full-Stack Developers)** — frontend & backend features  
 - **UI/UX Designers (Design Team)** — intuitive, user-friendly interfaces (web & mobile)  
