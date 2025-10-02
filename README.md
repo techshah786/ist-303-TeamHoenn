@@ -48,7 +48,7 @@ Total = 8-14 work days
 1. Finish Dashboard (2 days)
 2. User account page (4 days)
 * Target*: Full dashboard, user account page, Integrated with authentication
-* 
+  
 ---------
 **SUMMARY**
 1. Total efforts = 8-14 days
