@@ -29,7 +29,7 @@ pbpaste > README.md
 | `US05` | **Dashboard & Charts** | Cesar Barrera|
 | `US06` | **CSV export**  | MD Shah Alam |
 
-
+-----
 **FEATURES IN MILESTONE 1**
 1. Version 1 of sign in/log in page (Phase 1 Authentication) --> 2-4 days
 2. Dashboard and charts page  --> 4-6 days
@@ -37,7 +37,7 @@ pbpaste > README.md
 
 Total = 8-14 work days
 
-
+--------
 **ITERATIONS**
 *Iteration 1* 
 1. Authentication (2-3 days)
@@ -49,7 +49,7 @@ Total = 8-14 work days
 2. User account page (4 days)
 * Target*: Full dashboard, user account page, Integrated with authentication
 * 
-
+---------
 **SUMMARY**
 1. Total efforts = 8-14 days
 2. Velocity = 7 days per iteration
@@ -57,6 +57,7 @@ Total = 8-14 work days
 4. Milestone 1.0 complete by end of iteration 2
 5. Currently on iteration 1
 
+---------
 <img width="1748" height="1180" alt="image" src="https://github.com/user-attachments/assets/26ef94b6-dd33-423c-b7cd-6975930cef33" />
 
 
