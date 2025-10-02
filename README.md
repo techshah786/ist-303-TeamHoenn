@@ -39,6 +39,7 @@ Total = 8-14 work days
 
 --------
 **ITERATIONS**
+
 *Iteration 1* 
 1. Authentication (2-3 days)
 2. Start Dashboard (4 days worth of work: setup + basic charts)
