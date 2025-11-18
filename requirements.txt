@@ -4,3 +4,4 @@ ply==3.11
 pywin32==311
 Flask
 mysql-connector-python
+openpyxl

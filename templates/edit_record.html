@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Edit Record{% endblock %}
+{% block content %}
+  <h2>Edit Record #{{ receipt.id }}</h2>
+
+  <form method="POST">
+    <label>Merchant:</label><br>
+    <input type="text" name="merchant" value="{{ receipt.merchant }}"><br><br>
+
+    <label>Category:</label><br>
+    <input type="text" name="category" value="{{ receipt.category }}"><br><br>
+
+    <label>Date (YYYY-MM-DD):</label><br>
+    <input type="text" name="receipt_date" value="{{ receipt.receipt_date }}"><br><br>
+
+    <label>Total:</label><br>
+    <input type="text" name="total" value="{{ receipt.total }}"><br><br>
+
+    <button type="submit">Save</button>
+  </form>
+{% endblock %}
+

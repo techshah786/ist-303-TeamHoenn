@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5" style="max-width: 600px;">
+    <div class="card shadow-lg border-0">
+        <div class="card-header bg-primary text-white text-center">
+            <h4 class="mb-0">💰 Add a New Expense Record</h4>
+        </div>
+        <div class="card-body p-4">
+            {% if message %}
+                <div class="alert alert-info text-center">{{ message|safe }}</div>
+            {% endif %}
+
+            <form method="POST" action="{{ url_for('upload_docs') }}">
+                <div class="mb-3">
+                    <label for="date" class="form-label fw-bold">Date:</label>
+                    <input type="date" class="form-control" id="date" name="date" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="category" class="form-label fw-bold">Category:</label>
+                    <input type="text" class="form-control" id="category" name="category" placeholder="e.g., Grocery, Fuel, Rent" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="description" class="form-label fw-bold">Description:</label>
+                    <input type="text" class="form-control" id="description" name="description" placeholder="Optional">
+                </div>
+
+                <div class="mb-3">
+                    <label for="payment_method" class="form-label fw-bold">Payment Method:</label>
+                    <select class="form-select" id="payment_method" name="payment_method">
+                        <option>Cash</option>
+                        <option>Credit Card</option>
+                        <option>Debit Card</option>
+                        <option>Online Transfer</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="amount" class="form-label fw-bold">Amount ($):</label>
+                    <input type="number" step="0.01" class="form-control" id="amount" name="amount" placeholder="Enter amount" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="notes" class="form-label fw-bold">Notes:</label>
+                    <textarea class="form-control" id="notes" name="notes" rows="3" placeholder="Optional"></textarea>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success px-4">💾 Save Expense</button>
+                    <a href="{{ url_for('view_records') }}" class="btn btn-secondary px-4">📜 View Records</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

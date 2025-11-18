@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Expense Records{% endblock %}
+
+{% block content %}
+<h2>Expense Records</h2>
+
+{% if message %}
+  <p>{{ message }}</p>
+{% else %}
+  <table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+      <tr>
+        {% for col in records[0].keys() %}
+          <th>{{ col }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in records %}
+      <tr>
+        {% for val in row.values() %}
+          <td>{{ val }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <br>
+  <a href="{{ url_for('download_excel') }}" class="btn btn-primary">Download Excel File</a>
+{% endif %}
+{% endblock %}
