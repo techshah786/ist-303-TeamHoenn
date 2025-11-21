@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 # Finance Tracker - Budget & Coupon Finder
 
 A comprehensive budget tracking and coupon finding application that helps you manage your finances, track expenses, and find the best deals online.
@@ -148,4 +145,4 @@ NODE_ENV=development
 
 
 Private project
->>>>>>> ac65295 (Part D)
+
