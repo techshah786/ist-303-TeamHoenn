@@ -65,3 +65,8 @@ Total = 8-14 work days
 <img width="1748" height="1180" alt="image" src="https://github.com/user-attachments/assets/26ef94b6-dd33-423c-b7cd-6975930cef33" />
 
 
+
+## How to Run
+
+### Quick Start
+
