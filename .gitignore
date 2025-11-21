@@ -1,1 +1,7 @@
 issues.csv
+__pycache__/
+*.pyc
+.coverage
+htmlcov/
+*.db
+.DS_Store
