@@ -70,3 +70,12 @@ Total = 8-14 work days
 
 ### Quick Start
 
+
+## Team Members
+- Cesar
+- Shah
+- Ucheoma
+- Shawn
+- Sameer
+
+See docs/TEAM_MEMBERS.md for detailed roles and contributions.
