@@ -1,0 +1,158 @@
+.navbar {
+  background: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+.brand-icon {
+  font-size: 1.8rem;
+}
+
+.brand-text {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1E293B;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-item {
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: var(--text-medium);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-item:hover {
+  background: #F8FAFC;
+  color: #4F46E5;
+}
+
+.nav-item.active {
+  background: #4F46E5;
+  color: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(79, 70, 229, 0.2);
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-dark);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.role-badge {
+  background: var(--accent-pink);
+  color: var(--light-text);
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.logout-btn {
+  padding: 0.5rem 1rem;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  color: #1E293B;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.logout-btn:hover {
+  background: var(--primary-indigo);
+  color: var(--light-text);
+  border-color: var(--primary-indigo);
+}
+
+@media (max-width: 1024px) {
+  .navbar-container {
+    flex-wrap: wrap;
+  }
+  
+  .navbar-menu {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+  }
+  
+  .nav-item {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 1rem;
+  }
+  
+  .brand-text {
+    font-size: 1.1rem;
+  }
+  
+  .navbar-user {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-end;
+  }
+  
+  .user-name {
+    font-size: 0.85rem;
+  }
+  
+  .logout-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+

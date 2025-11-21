@@ -1,0 +1,40 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--background-gray);
+}
+
+.app-main {
+  flex: 1;
+  padding: 0;
+  width: 100%;
+  background: var(--background-gray);
+}
+
+.receipt-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--background-gray);
+  min-height: calc(100vh - 80px);
+}
+
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 2rem;
+  }
+  
+  .app-main {
+    padding: 1rem;
+  }
+  
+  .app-nav {
+    flex-direction: column;
+  }
+  
+  .app-nav button {
+    width: 100%;
+  }
+}
+

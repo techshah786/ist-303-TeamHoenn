@@ -1,0 +1,103 @@
+.budget {
+  width: 100%;
+}
+
+.budget-header {
+  background: var(--background-cream);
+  border: 2px solid var(--primary-purple);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.budget-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.budget-summary h2 {
+  color: #1E293B;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.budget-display {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--light-text);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.budget-label {
+  color: #4F46E5;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.budget-amount {
+  color: #10B981;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.budget-nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.budget-nav button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background: var(--primary-indigo);
+  color: var(--light-text);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.budget-nav button:hover {
+  background: var(--primary-purple);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.budget-nav button.active {
+  background: linear-gradient(135deg, var(--accent-mint) 0%, var(--accent-emerald) 100%);
+  box-shadow: 0 4px 12px rgba(227, 111, 81, 0.4);
+}
+
+.budget-main {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .budget-summary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .budget-display {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .budget-nav {
+    flex-direction: column;
+  }
+  
+  .budget-nav button {
+    width: 100%;
+  }
+}
+

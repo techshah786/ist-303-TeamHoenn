@@ -1,0 +1,131 @@
+.pantry {
+  width: 100%;
+}
+
+.pantry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pantry-header h2 {
+  color: var(--primary-dark);
+  font-size: 2rem;
+}
+
+.pantry-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-add, .btn-notification {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-add {
+  background: linear-gradient(135deg, var(--accent-mint) 0%, var(--accent-emerald) 100%);
+  color: var(--light-text);
+}
+
+.btn-add:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(227, 111, 81, 0.4);
+}
+
+.btn-notification {
+  background: var(--primary-purple);
+  color: var(--light-text);
+}
+
+.btn-notification:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.low-stock-alert {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffe69c 100%);
+  border: 2px solid var(--accent-mint);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(244, 162, 97, 0.3);
+}
+
+.low-stock-alert h3 {
+  color: var(--accent-emerald);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.low-stock-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.low-stock-item {
+  background: var(--light-text);
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.low-stock-item .percentage {
+  color: var(--accent-emerald);
+  font-weight: 600;
+}
+
+.pantry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.empty-pantry {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--background-cream);
+  border-radius: 12px;
+  border: 2px dashed var(--primary-indigo);
+}
+
+.empty-pantry p {
+  font-size: 1.2rem;
+  color: var(--primary-dark);
+}
+
+@media (max-width: 768px) {
+  .pantry-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pantry-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .pantry-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .btn-add, .btn-notification {
+    width: 100%;
+  }
+}
+

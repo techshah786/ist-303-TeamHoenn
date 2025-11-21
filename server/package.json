@@ -1,0 +1,20 @@
+{
+  "name": "coupon-scraper-api",
+  "version": "1.0.0",
+  "description": "Backend API for coupon scraping",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "puppeteer": "^21.5.0",
+    "dotenv": "^16.3.1"
+  }
+}
+

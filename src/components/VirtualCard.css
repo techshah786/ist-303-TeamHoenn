@@ -1,0 +1,378 @@
+.virtual-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.virtual-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.virtual-card-header h3 {
+  color: var(--text-dark);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.card-style-toggle {
+  background: var(--background-white);
+  border: 1px solid var(--border-gray);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card-style-toggle:hover {
+  background: var(--background-gray);
+  transform: scale(1.1);
+}
+
+.virtual-card {
+  border-radius: 16px;
+  padding: 1.5rem;
+  color: var(--light-text);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  perspective: 1000px;
+}
+
+.virtual-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark card style */
+.virtual-card.dark {
+  background: linear-gradient(135deg, #1E293B 0%, #334155 50%, #475569 100%);
+}
+
+.virtual-card.dark::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+  animation: shimmer 4s infinite;
+}
+
+/* Light card style */
+.virtual-card.light {
+  background: linear-gradient(135deg, #6366F1 0%, #818CF8 30%, #FFFFFF 100%);
+  color: var(--text-dark);
+}
+
+.virtual-card.light::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.1) 0%, transparent 70%);
+  animation: shimmer 4s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.virtual-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.virtual-card.light .virtual-badge {
+  background: rgba(255, 255, 255, 0.25);
+  color: var(--text-dark);
+  border: 1px solid rgba(79, 70, 229, 0.2);
+}
+
+.star-icon {
+  font-size: 0.85rem;
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.card-number {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  font-family: 'Courier New', monospace;
+  margin-bottom: 0.5rem;
+}
+
+.virtual-card.light .card-number {
+  color: var(--text-dark);
+}
+
+.card-details {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card-detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.card-label-small {
+  font-size: 0.7rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.virtual-card.light .card-label-small {
+  opacity: 0.6;
+  color: var(--text-dark);
+}
+
+.card-value-small {
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+}
+
+.virtual-card.light .card-value-small {
+  color: var(--text-dark);
+}
+
+.card-holder-name {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.virtual-card.light .card-holder-name {
+  color: var(--text-dark);
+}
+
+.card-balance {
+  margin-top: auto;
+}
+
+.balance-display {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.balance-display:hover {
+  transform: scale(1.02);
+}
+
+.balance-label {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.virtual-card.light .balance-label {
+  opacity: 0.6;
+  color: var(--text-dark);
+}
+
+.balance-amount {
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.virtual-card.light .balance-amount {
+  color: var(--text-dark);
+}
+
+.balance-edit {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.balance-input {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: var(--light-text);
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 180px;
+  font-family: inherit;
+}
+
+.virtual-card.light .balance-input {
+  background: rgba(255, 255, 255, 0.4);
+  border: 2px solid rgba(79, 70, 229, 0.3);
+  color: var(--text-dark);
+}
+
+.balance-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.virtual-card.light .balance-input::placeholder {
+  color: rgba(30, 41, 59, 0.5);
+}
+
+.balance-input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.virtual-card.light .balance-input:focus {
+  border-color: var(--primary-indigo);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.edit-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.save-btn,
+.cancel-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-weight: 700;
+}
+
+.save-btn {
+  background: rgba(16, 185, 129, 0.9);
+  color: var(--light-text);
+}
+
+.save-btn:hover {
+  background: rgba(16, 185, 129, 1);
+  transform: scale(1.1);
+}
+
+.cancel-btn {
+  background: rgba(239, 68, 68, 0.9);
+  color: var(--light-text);
+}
+
+.cancel-btn:hover {
+  background: rgba(239, 68, 68, 1);
+  transform: scale(1.1);
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.visa-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-family: 'Arial', sans-serif;
+}
+
+.virtual-card.light .visa-logo {
+  color: var(--text-dark);
+}
+
+.virtual-card-disclaimer {
+  margin-top: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #FEF3C7;
+  border: 1px solid #FBBF24;
+  border-radius: 8px;
+  border-left: 4px solid #F59E0B;
+}
+
+.virtual-card-disclaimer p {
+  color: #92400E;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .virtual-card {
+    min-height: 220px;
+    padding: 1.25rem;
+  }
+  
+  .card-number {
+    font-size: 1.2rem;
+  }
+  
+  .balance-amount {
+    font-size: 1.75rem;
+  }
+  
+  .balance-input {
+    width: 150px;
+    font-size: 1.25rem;
+  }
+}

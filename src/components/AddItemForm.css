@@ -1,0 +1,127 @@
+.add-item-form {
+  background: var(--background-cream);
+  border: 2px solid var(--primary-purple);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.add-item-form h3 {
+  color: var(--primary-dark);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: var(--primary-dark);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="url"],
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--primary-indigo);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: var(--light-text);
+  color: var(--text-dark);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary-purple);
+  box-shadow: 0 0 0 3px rgba(45, 122, 128, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.photo-upload {
+  margin-bottom: 0.5rem;
+}
+
+.photo-upload input[type="file"] {
+  margin-bottom: 0.5rem;
+}
+
+.photo-preview {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 8px;
+  border: 2px solid var(--primary-purple);
+  margin-top: 0.5rem;
+  object-fit: cover;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.btn-submit,
+.btn-cancel {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-submit {
+  background: linear-gradient(135deg, var(--accent-mint) 0%, var(--accent-emerald) 100%);
+  color: var(--light-text);
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(227, 111, 81, 0.4);
+}
+
+.btn-cancel {
+  background: var(--primary-indigo);
+  color: var(--light-text);
+}
+
+.btn-cancel:hover {
+  background: var(--primary-purple);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .add-item-form {
+    padding: 1.5rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .btn-submit,
+  .btn-cancel {
+    width: 100%;
+  }
+}
+

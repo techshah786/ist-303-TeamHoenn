@@ -1,76 +1,144 @@
-# Personal Finance Tracker with Smart Analytics
+<<<<<<< HEAD
 
-A Flask-based web app (later mobile) that helps individuals track income, expenses, savings, and investments; scan/upload receipts; and view dashboards. Provides insights into spending, budgeting, and goals; aims to be easy to use, secure, and scalable. Features visual dashboards, (future) automatic categorization, insights, budgets, reminders, and data export.
+=======
+# Finance Tracker - Budget & Coupon Finder
 
-pbpaste > README.md
+A comprehensive budget tracking and coupon finding application that helps you manage your finances, track expenses, and find the best deals online.
 
----
+## Features
 
-## Part B
-- See **docs/plan.md** for iterations, velocity, and task allocation.
-- Burndown: **docs/burndown.csv**
-- Standups: **docs/standups/** (updated twice weekly)
-- Development & Testing: **tests/**
+### Budget Management
+- Track income and expenses with detailed transactions
+- Set weekly or monthly budgets
+- Visual dashboard with spending breakdowns by category
+- Real-time budget tracking and alerts
+- Transaction analysis with week-over-week comparisons
 
----
+### Coupon Finder
+- **Real Web Scraping**: Backend API scrapes real coupons from RetailMeNot, Honey, and Google Shopping
+- Search for coupons by item name
+- Direct product links and store addresses
+- Discount codes and savings calculations
+- Category-based pricing estimates
+- Store-specific or general coupon preferences
 
-**Stakeholders:** see [docs/STAKEHOLDERS.md](docs/STAKEHOLDERS.md)
+### Virtual Card
+- Track virtual card balance
+- Automatically updates with transactions
+- Editable initial balance
 
-**Backlog:** see [docs/backlog.md](docs/backlog.md)
+### Transaction Management
+- Manual transaction entry (income/expense)
+- Category-based organization
+- Detailed transaction history
+- Delete and filter transactions
 
+### Transaction Analysis
+- Weekly spending comparisons
+- Daily spending trends
+- Top spending categories
+- Top purchased items
+- Insights and suggestions based on spending habits
 
------------
+## Setup Instructions
 
-|User Stories | Tasks   | Team Member Allocation| 
-| ------------| --------|-------------------|
-| `US01` | **Secure Authentication**  | MD Shah Alam|
-| `US02` | **CRUD transactions**      | Sameer Alghamdi|
-| `US03` | **Categories** | Shawn Rim|
-| `US04` | **Budget per category**| Ucheoma Okoma |
-| `US05` | **Dashboard & Charts** | Cesar Barrera|
-| `US06` | **CSV export**  | MD Shah Alam |
+### Frontend Setup
 
------
-**FEATURES IN MILESTONE 1**
-1. Version 1 of sign in/log in page (Phase 1 Authentication) --> 2-4 days
-2. Dashboard and charts page  --> 4-6 days
-3. User account page.  --> 2 - 4 days
+1. **Install Dependencies**
+   ```bash
+   npm install
+   ```
 
-Total = 8-14 work days
+2. **Start Development Server**
+   ```bash
+   npm run dev
+   ```
 
---------
-**ITERATIONS**
+   Frontend will run on `http://localhost:5173`
 
-*Iteration 1* 
-1. Authentication (2-3 days)
-2. Start Dashboard (4 days worth of work: setup + basic charts)
-   
-*Target*: working authentication + partial dashboard (basic data pipeline/charts)
+### Backend API Setup (For Real Coupon Scraping)
 
-*Iterations 2*
-1. Finish Dashboard (2 days)
-2. User account page (4 days)
+1. **Install Backend Dependencies**
+   ```bash
+   cd server
+   npm install
+   ```
 
-* Target*: Full dashboard, user account page, Integrated with authentication
-  
----------
-**SUMMARY**
-1. *Total efforts* = 8-14 days
-2. *Velocity* = 7 days per iteration
-3. *Planned duration* = 2 iterations (~ 2 weeks)
-4. *Milestone 1.0* complete by end of iteration 2
-5. *Currently on iteration 1*
+2. **Start Backend Server**
+   ```bash
+   npm run dev:server
+   ```
 
----------
-<img width="1748" height="1180" alt="image" src="https://github.com/user-attachments/assets/26ef94b6-dd33-423c-b7cd-6975930cef33" />
+   Or from root directory:
+   ```bash
+   npm run dev:server
+   ```
 
+   Backend API will run on `http://localhost:3001`
 
+3. **Run Both Frontend and Backend Together**
+   ```bash
+   npm run dev:all
+   ```
 
-## How to Run
+### Environment Variables (Optional)
 
-### Quick Start
+Create a `.env` file in the `server` directory:
 
+```env
+PORT=3001
+NODE_ENV=development
+# Optional: API keys for coupon services
+# HONEY_API_KEY=your_api_key_here
+# RETAILMENOT_API_KEY=your_api_key_here
+```
 
+## Technology Stack
+
+### Frontend
+- React 18
+- Vite
+- React Router DOM
+- Recharts (data visualization)
+- Local Storage (data persistence)
+
+### Backend
+- Node.js/Express
+- Puppeteer (web scraping)
+- Cheerio (HTML parsing)
+- Axios (HTTP requests)
+- CORS enabled
+
+## Project Structure
+
+```
+├── src/
+│   ├── components/         # React components
+│   │   ├── Navbar.jsx
+│   │   ├── VirtualCard.jsx
+│   │   ├── TransactionForm.jsx
+│   │   └── ErrorBoundary.jsx
+│   ├── pages/              # Page components
+│   │   ├── Home.jsx        # Dashboard
+│   │   ├── Transactions.jsx
+│   │   ├── Coupons.jsx
+│   │   ├── TransactionAnalysis.jsx
+│   │   └── Login.jsx
+│   └── utils/              # Utility functions
+│       ├── auth.js
+│       ├── transactions.js
+│       ├── couponSearch.js  # Mock data (fallback)
+│       └── couponAPI.js     # API client
+├── server/                 # Backend API
+│   ├── server.js          # Express server
+│   ├── routes/            # API routes
+│   │   └── coupons.js
+│   ├── services/          # Business logic
+│   │   └── couponScraper.js
+│   └── utils/             # Utilities
+│       └── priceEstimator.js
+└── package.json
+```
 ## Team Members
 - Cesar
 - Shah
@@ -78,4 +146,6 @@ Total = 8-14 work days
 - Shawn
 - Sameer
 
-See docs/TEAM_MEMBERS.md for detailed roles and contributions.
+
+Private project
+>>>>>>> ac65295 (Part D)
